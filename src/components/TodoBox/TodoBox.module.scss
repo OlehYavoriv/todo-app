@@ -1,0 +1,23 @@
+.container {
+  @apply rounded-lg shadow-md  border border-gray-300 w-[50%];
+
+  &_title {
+    @apply text-xl font-bold  bg-gray-100 rounded-t-lg p-4 border-b-[1px] border-gray-300;
+  }
+
+  .inside_box {
+    @apply bg-[#fff] rounded-b-lg p-6;
+
+    .form {
+      @apply flex mb-3;
+
+      &__input {
+        @apply w-full border-[1px] border-gray-300 rounded-l-md p-2 focus:border-gray-500 outline-0;
+      }
+
+      &__send_btn {
+        @apply px-4 py-2 bg-indigo-500 text-white rounded-r-md hover:bg-indigo-600;
+      }
+    }
+  }
+}
