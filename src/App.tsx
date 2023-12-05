@@ -1,5 +1,9 @@
+import { TodoBox } from "./components/TodoBox";
+
 export const App = () => {
     return (
-        <div>Hello world</div>
+        <div className='wrapper'>
+            <TodoBox/>
+        </div>
     );
 }
