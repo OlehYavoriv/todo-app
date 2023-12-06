@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { toast } from "react-toastify";
 import { Todo } from '../../utils/interfaces';
+import { TodoList } from "../TodoList";
 import { error, success } from "../../utils/toasts";
 import { useCreateToDo, useDeleteToDo, useCompletedToDo, useEditToDo, useFetchToDo } from '../../hooks/todoHooks';
 import styles from './TodoBox.module.scss';
@@ -51,6 +52,8 @@ export const TodoBox = () => {
                         Submit
                     </button>
                 </form>
+                <TodoList data={data} onDelete={handleDeleteToDo} onToggleCompleted={handleCompletedToDo}
+                          onEdit={handleEditToDo}/>
             </div>
         </div>
     );
