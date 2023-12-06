@@ -1,0 +1,59 @@
+.table {
+  @apply w-full border-[1px];
+
+  &_body {
+    &__item {
+      @apply flex items-center justify-between p-4;
+
+      .label {
+        @apply flex items-center space-x-2 cursor-pointer mr-2;
+
+        &__checkbox {
+          @apply h-4 w-4 text-gray-950 cursor-pointer rounded-md;
+        }
+      }
+    }
+
+    &__btns {
+      @apply space-x-2;
+
+      .update_btn,
+      .remove_btn {
+        @apply px-4 py-2 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-opacity-50;
+      }
+
+      .update_btn {
+        @apply bg-green-500 hover:bg-green-600 focus:ring-green-600;
+      }
+
+      .remove_btn {
+        @apply bg-red-500 hover:bg-red-600 focus:ring-red-600;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    &_body {
+      &__item {
+        @apply flex-col;
+
+        .label {
+          span {
+            @apply truncate break-all whitespace-normal;
+          }
+        }
+      }
+
+      &__btns {
+        @apply mt-2 flex items-center;
+
+        .update_btn,
+        .remove_btn {
+          @apply w-[50%];
+        }
+      }
+    }
+  }
+}
